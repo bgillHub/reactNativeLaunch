@@ -6,6 +6,16 @@ import { Card, CardSection, Input, PurchaseButton } from './common';
 import EmployeeForm from './EmployeeForm';
 class EmployeeCreate extends Component {
 
+  buttonStyle = {
+    color: 'red'
+  };
+
+  setThirdButton(button) {
+  if (button.placement % 3 === 0 ) {
+    button.color = 'red'
+  }
+}
+
   onButtonPress(){
     const { name, phone, shift } = this.props;
 
